@@ -28,13 +28,4 @@
 
 #include <afxcontrolbars.h>     // MFC support for ribbons and control bars
 
-
-
-
-
-
-
-
-
-
-
+#include <WinSock2.h>
