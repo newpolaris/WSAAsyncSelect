@@ -1,14 +1,7 @@
-
-// WSAAsyncSelectDlg.h : header file
-//
-
 #pragma once
 
-
-// CWSAAsyncSelectDlg dialog
 class CWSAAsyncSelectDlg : public CDialog
 {
-// Construction
 public:
 	CWSAAsyncSelectDlg(CWnd* pParent = NULL);	// standard constructor
 

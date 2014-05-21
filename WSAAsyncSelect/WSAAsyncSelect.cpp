@@ -1,7 +1,3 @@
-
-// WSAAsyncSelect.cpp : Defines the class behaviors for the application.
-//
-
 #include "stdafx.h"
 #include "WSAAsyncSelect.h"
 #include "WSAAsyncSelectDlg.h"
@@ -9,9 +5,6 @@
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
-
-
-// CWSAAsyncSelectApp
 
 BEGIN_MESSAGE_MAP(CWSAAsyncSelectApp, CWinApp)
 	ON_COMMAND(ID_HELP, &CWinApp::OnHelp)
@@ -22,14 +15,10 @@ CWSAAsyncSelectApp::CWSAAsyncSelectApp()
 {
 }
 
-
 // The one and only CWSAAsyncSelectApp object
-
 CWSAAsyncSelectApp theApp;
 
-
 // CWSAAsyncSelectApp initialization
-
 BOOL CWSAAsyncSelectApp::InitInstance()
 {
 	CWinApp::InitInstance();
