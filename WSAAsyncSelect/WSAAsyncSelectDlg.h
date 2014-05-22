@@ -1,18 +1,21 @@
 #pragma once
+#include <memory>
+#include <vector>
+
+#include "afxwin.h"
+#include "Server.h"
+#include "log.h"
 
 class CWSAAsyncSelectDlg : public CDialog
 {
 public:
-	CWSAAsyncSelectDlg(CWnd* pParent = NULL);	// standard constructor
+	explicit CWSAAsyncSelectDlg(CWnd* pParent = nullptr);	// standard constructor
 
-// Dialog Data
 	enum { IDD = IDD_WSAASYNCSELECT_DIALOG };
 
-	protected:
+protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV support
 
-
-// Implementation
 protected:
 	HICON m_hIcon;
 
@@ -21,4 +24,14 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+	afx_msg LRESULT OnSocketMsg(WPARAM wParam, LPARAM lParam);
+public:
+	CListBox m_ctOutput;
+private:
+	std::unique_ptr<echoservice::Server> m_server;
+	std::vector<char> m_send_buffer;
+	echoservice::output m_out;
+
+public:
+	afx_msg void OnBnClickedStartServer();
 };

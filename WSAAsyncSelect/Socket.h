@@ -10,13 +10,11 @@ namespace echoservice
 		Socket(const Socket&);
 		const Socket& operator=(const Socket&);
 
-	protected:
-		void CloseSocket(SOCKET* sc, bool force = false) override;
-
 	public:
 		Socket();
 		virtual ~Socket();
 		void InitSocket() override;
+		void CloseSocket(SOCKET* sc, bool force = false) override;
 
 	protected:
 		SOCKET m_socket;

@@ -20,11 +20,11 @@ void Socket::InitSocket()
 	WSADATA wsaData;
 	int nStartUpRet = WSAStartup(MAKEWORD(2, 2), &wsaData);
 	if (nStartUpRet != 0)
-		throw NetworkExcpetion("Can't initalize WSA");
+		throw NetworkException("Can't initalize WSA");
 
 	auto sc = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	if (sc == INVALID_SOCKET)
-		throw NetworkExcpetion("INVALIDE_SOCKET");
+		throw NetworkException("INVALIDE_SOCKET");
 
 	m_socket = sc;
 }

@@ -21,7 +21,7 @@ namespace echoservice {
 			sizeof(sockaddr));
 
 		if (nConnectRet == SOCKET_ERROR)
-			throw NetworkExcpetion("Connet error");
+			throw NetworkException("Connet error");
 
 		while (true)
 		{
@@ -40,14 +40,14 @@ namespace echoservice {
 			int nSendRet = send(m_socket, buffer.data(), sentLength, 0);
 
 			if (nSendRet == SOCKET_ERROR)
-				throw NetworkExcpetion("Send error");
+				throw NetworkException("Send error");
 
 			int nRecvRet = recv(m_socket, buffer.data(), buffer.size(), 0);
 			if (nRecvRet == 0)
 				return;
 
 			if (nRecvRet == SOCKET_ERROR)
-				throw NetworkExcpetion("Recv error");
+				throw NetworkException("Recv error");
 
 			if (nRecvRet > 0)
 				std::cout << "RECEVIED FROM CLIENT: " << string(buffer.data(), buffer.data() + nSendRet) << std::endl;

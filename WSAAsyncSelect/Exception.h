@@ -4,11 +4,11 @@
 #include <string>
 
 namespace echoservice {
-	class NetworkExcpetion : public std::exception
+	class NetworkException : public std::exception
 	{
 	public:
-		explicit NetworkExcpetion(const char* msg);
-		explicit NetworkExcpetion(std::string&& msg);
+		explicit NetworkException(const char* msg);
+		explicit NetworkException(std::string&& msg);
 		virtual const char* what() const throw();
 
 	private:

@@ -25,21 +25,21 @@ namespace echoservice {
 		}
 	};
 
-	NetworkExcpetion::NetworkExcpetion(const char* msg)
+	NetworkException::NetworkException(const char* msg)
 	{
 		Message(string(msg));
 	}
 
-	NetworkExcpetion::NetworkExcpetion(string&& msg)
+	NetworkException::NetworkException(string&& msg)
 	{
 		Message(msg);
 	}
 
-	const char* NetworkExcpetion::what() const throw() {
+	const char* NetworkException::what() const throw() {
 		return message.c_str();
 	}
 
-	void NetworkExcpetion::Message(string msg)
+	void NetworkException::Message(string msg)
 	{
 		message = "[" + string(__FILE__) + "][" + std::to_string(__LINE__) + "]"
 			+ msg + " " + enumToString::WSAError(WSAGetLastError())

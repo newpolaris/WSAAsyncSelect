@@ -48,6 +48,9 @@
     <ClInclude Include="Info.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WSAAsyncSelect.cpp">
@@ -57,9 +60,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AsyncSelect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Socket.cpp">
@@ -72,6 +72,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
